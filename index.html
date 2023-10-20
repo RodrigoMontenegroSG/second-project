@@ -2,16 +2,23 @@
 <html>
 <head>
   <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div style="margin-bottom: 20px">
-    <input type="button" value="rock" />
-    <input type="button" value="paper" />
-    <input type="button" value="scissors" />
-  </div>
-  <div id="result"></div>
-  <p id="playerPoints">Player: 0</p>
-  <p id="pcPoints">PC: 0</p>
+    <div id="result"></div>
+    <div id="result"></div>
+    <div class="images">
+        <img src="./images/piedra.png">
+        <img src="./images/tijera.png">
+        <img src="./images/papel.png">
+    </div>
+    <div class="buttons">
+        <input type="button" value="rock" />
+        <input type="button" value="scissors" />
+        <input type="button" value="paper" />
+    </div>
+    <p id="playerPoints">Player: 0</p>
+    <p id="pcPoints">PC: 0</p>
   <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons input{
+    display: flex;
+    display: inline-block;
+    width: 376px;
+    height: 120px;
+    color: transparent;
+    border: none;
+}
+
+.buttons input[value="rock"] {
+    background-image: url(./images/rock.png);
+}
+.buttons input[value="paper"] {
+    width: 396px;
+    height: 120px;
+    background-image: url(./images/paper.png);
+}
+.buttons input[value="scissors"] {
+    width: 348px;
+    height: 124px;
+    background-image: url(./images/scissors.png);
+}
+
