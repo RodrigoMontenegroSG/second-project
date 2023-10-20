@@ -5,6 +5,8 @@ const buttons = document.querySelectorAll('input[type="button"]');
 const playerPointsElement = document.getElementById('playerPoints');
 const pcPointsElement = document.getElementById('pcPoints');
 
+
+
 buttons.forEach(button => {
     button.addEventListener('click', () => {
       const PlayerSelect = button.value;
@@ -13,8 +15,8 @@ buttons.forEach(button => {
   });
 
 function updatePoints() {
-    playerPointsElement.textContent = `Player: ${PlayerPoint}`;
-    pcPointsElement.textContent = `PC: ${PcPoint}`;
+    document.getElementById('playerScore').textContent = PlayerPoint;
+    document.getElementById('pcScore').textContent = PcPoint;
   }
 
 function pcChoice() {
@@ -22,9 +24,11 @@ function pcChoice() {
   return choice[Math.floor(Math.random() * choice.length)]
 }
 function disableButtons() {
-    buttons.forEach(elem => {
-        elem.disabled = true
-    })
+    const gameButtons = document.querySelectorAll('.game-button');
+
+    gameButtons.forEach(elem => {
+        elem.disabled = true;
+    });
 }
 
 function round(PlayerSelect) {
@@ -44,12 +48,15 @@ function round(PlayerSelect) {
     updatePoints();
 
     if (PlayerPoint === 5) {
-        result = "Player Wins!!!!";
+        result = '<img src="./images/player-win.png">';
         disableButtons();
     } else if (PcPoint === 5) {
-        result = "Pc Wins!!!";
+        result = '<img src="./images/pc-win.png">';
         disableButtons();
     }
 
     document.getElementById('result').innerHTML = result;
 }
+document.getElementById('reloadButton').addEventListener('click', function() {
+    location.reload();
+});

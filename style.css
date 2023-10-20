@@ -38,3 +38,24 @@ body {
     background-image: url(./images/scissors.png);
 }
 
+.buttons input[id="reloadButton"]{
+    display: flex;
+    height: 96px;
+    width: 328px;
+    background-image: url(./images/retry.png);
+}
+
+#playerPoints img,
+#pcPoints img {
+    height: 80px;
+    width: 250px;
+}
+
+#result{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+}
+
+#playerScore, #pcScore {
+    font-size: 80px;
+}
